@@ -1,15 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+
 .App {
   text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1rem;
+}
+
+.App-logo2 {
+  height: 8vmin;
+  pointer-events: all;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 4vmin;
+  pointer-events: all;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    /* animation: App-logo-spin infinite 10s linear; */
+    animation: App-logo-spin infinite 10s ease-in;
   }
 }
 
@@ -28,11 +42,449 @@
   color: #61dafb;
 }
 
+.slider-css {
+  min-height: 950px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(./logo512.png);
+}
+
+.bg-nav {
+  background: #ff966a !important;
+  color: #fff;
+}
+
+.sticky-bar {
+  left: 0;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  z-index: 9999;
+  -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+  animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+  -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  background: #ff966a !important;
+}
+
+.card {
+  border: 0px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  color: black;
+}
+.card:hover {
+  animation-name: ch-text;
+  animation-duration: infinite;
+  border: 1px solid rgba(221, 196, 196, 0.125);
+  border-radius: 0rem;
+  -webkit-box-shadow: 10px 10px 15px rgba(25, 25, 25, 0.1);
+  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  z-index: 999;
+  -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+  animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+  -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+}
+
+.align-item-center {
+  display: flex;
+  align-items: center !important;
+}
+
+.info-mail-no {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center !important;
+
+  left: 0;
+  right: 0;
+}
+
+.white-text {
+  color: white;
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: 900;
+}
+
+.nav-link {
+  color: white;
+  font-weight: 900;
+}
+
+.fa-envelope {
+  border: 1px solid aliceblue;
+  padding: 11px;
+  border-radius: 31px;
+  font-size: 29px;
+}
+
+.fa-laptop {
+  border: 1px solid aliceblue;
+  padding: 11px;
+  border-radius: 31px;
+  font-size: 29px;
+}
+
+.fa-phone {
+  border: 1px solid aliceblue;
+  padding: 11px;
+  border-radius: 31px;
+  font-size: 29px;
+}
+
+.nav-item {
+  color: white;
+  font-weight: 900;
+}
+
+.text-message {
+  text-align: left;
+}
+
+.phone-no {
+  text-align: left;
+}
+
+.email {
+  text-align: left;
+}
+
+.log-home {
+  display: flex;
+  align-items: center;
+}
+
+.card-ico {
+  text-align: left;
+  font-size: 75px;
+}
+
+.footer {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("./components/footer-bg.jpg");
+}
+
+/* Overlay Image CSS */
+
+.overlay-content,
+.img-pop-up {
+  font-size: 20px;
+  color: #261201 !important;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+.img-pop-up {
+  position: absolute;
+  top: 75%;
+  left: 5%;
+}
+
+.gallery-img {
+  top: 400px;
+  left: 0px;
+  max-width: 570px;
+  height: 400px;
+  border-radius: 15px;
+  background-image: url(./tech.png);
+  background-repeat: no-repeat;
+}
+
+.tech {
+  background-image: url(./tech.png);
+  background-repeat: no-repeat;
+}
+.health {
+  background-image: url(./health.png);
+  background-repeat: no-repeat;
+}
+.gadget {
+  background-image: url(./gadget.png);
+  background-repeat: no-repeat;
+}
+.Muchmore {
+  background-image: url(./muchmore.png);
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 15px;
+  background-color: #008bba1e;
+  overflow: hidden;
+  /* max-width: 98%; */
+  height: 0;
+  transition: 0.5s ease;
+  /* top: 400px;
+  left: 0px;
+  width: 570px;
+  height: 400px; */
+  margin: 0px 15px 0px 15px;
+}
+
+.box:hover .overlay {
+  height: 100%;
+}
+
+/* Gradient animation start */
+
+.border {
+  /* padding: 5px; */
+  background: linear-gradient(110deg, #ffeead 33%, rgba(0, 0, 0, 0) 33%),
+    linear-gradient(110deg, #c5e7d7 34%, #88d8b0 34%);
+  background-size: 400% 400%;
+  /* height: 400px; */
+  background-position: 25% 50%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+.inner-cutout {
+  padding: 40px 0;
+  display: block;
+  background-color: #ff6f69; /*#ff6f69*/
+
+  margin: 2%;
+  padding-bottom: 40px;
+  /* height: 300px; */
+
+  background: radial-gradient(#ff8553, #ff966a);
+  background-size: 300%;
+  background-position: 50% 50%;
+}
+.knockout {
+  vertical-align: middle;
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  font-size: 50pt;
+  color: blue;
+  color: #fff;
+  background: linear-gradient(110deg, #ffeead 33%, rgba(0, 0, 0, 0) 33%),
+    linear-gradient(110deg, #c5e7d7 34%, #88d8b0 34%);
+  background-size: 400%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.knockout {
+  animation: Gradient 5s ease infinite;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+}
+
+.back-div-tra {
+  position: absolute;
+
+top: -53px;
+
+left: 105px;
+
+z-index: -12;
+
+width: 125%;
+
+height: 119%;
+
+background-color: #ddd3;
+
+border-radius: 45px 0px 0px 45px;
+
+bottom: 0;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 30% 50%;
+  }
+  50% {
+    background-position: 25% 50%;
+  }
+  100% {
+    background-position: 30% 50%;
+  }
+}
+
+.main {
+  max-width: 800px;
+  height: 800px;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+}
+
+/* Gradient animation end */
+
+/* contact animation css */
+
+.bigmess {
+  text-align: center;
+  background: linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+  color: #555;
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 32px;
+  padding-top: 40vh;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.ness {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ess {
+  animation: showup 7s infinite;
+}
+
+.nss {
+  width: 0px;
+  animation: reveal 7s infinite;
+}
+
+.nss span {
+  margin-left: -355px;
+  animation: slidein 7s infinite;
+}
+
+.wb:hover {
+  animation: wobble 1s 1;
+}
+
+.flex-class {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+}
+
+.social > i {
+  border: 1px solid black;
+  margin: 0.3rem;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: -800px;
+  }
+  20% {
+    margin-left: -800px;
+  }
+  35% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  20% {
+    opacity: 1;
+    width: 0px;
+  }
+  30% {
+    width: 365px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 365px;
+  }
+}
+/* 
+p.card-text {
+  font-size: 12px;
+  color: #999;
+  margin-top: 200px;
+} */
+
+/* Contact animation css end */
+@media only screen and (max-width: 768px) and (max-width: 991px) {
+  .single-css {
+    min-height: 600px !important;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .single-css {
+    min-height: 750px;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes ch-text {
+  from {
+    color: black;
+  }
+  to {
+    color: #ff966a;
+  }
+}
+
+@keyframes wobble {
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
